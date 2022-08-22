@@ -1,37 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
 html {
     box-sizing: border-box;
+    max-width: 1400px;
+    margin: auto;
 }
 
 body {
+    margin: 0;
     font-family: 'Play', sans-serif;
     font-weight: 400;
+    position: relative;
 }
 
 header {
     display: flex;
-    margin: 0 100px;
+    padding: 2px 100px;
     height: 50px;
-    justify-content: space-between;
+    position: absolute;
+    left: 0px;
+    right: 0px;
 }
 
-header .header-left {
-   height: 100%;
+.header-on-top {
+    justify-content: space-between;
+
+}
+
+.header-on-scroll {
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(230, 163, 21);
+}
+
+header .logo-on-scroll {
+    height: 100%;
+}
+
+header .logo-on-top {
+    height: 120%;
+    padding-top: 20px;
 }
 
 header .header-left img {
     height: 100%;
 }
 
-header .header-right ul{
+
+header .header-right ul {
     display: flex;
     justify-content: space-between;
+    padding: 0;
 }
 
 
-header .header-right ul li{
+header .header-right ul li {
     list-style-type: none;
 }
 
 header a {
     text-decoration: none;
+    padding: 15px;
+}
+
+header .link-active {
+    color: rgb(209, 40, 25);
+}
+
+header .link-inactive {
+    color: black;
+}
+
+
+
+.home h3{
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home h1{
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    font-size: 60px;
+    color: #e6a315;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home button {
+    margin-top: 50px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 12px 22px;
+    transition: all 0.4s;
+    font-size: 14px
+}
+
+.home button:hover{
+    background: rgba(255,255,255,0.6);
+    color: black;
+    margin-top: 50px;
+     border: none;
+    border-radius: 10px;
+     margin-top: 40px;
+    padding: 12px 22px;
+    transition: all 0.4s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.home .activity-image img {
+    width: 100%;
+    
+}
+
+.home .activity-info {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+footer {
+    background: #202020;
+    color: #e6a315;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
 }
