@@ -153,6 +153,7 @@ footer {
 
 .about-us {
     background-color: rgb(255, 249, 240);
+    padding-bottom: 80px;
 }
 
 .about-us .title {
@@ -203,5 +204,30 @@ footer {
 }
 
 .udostoverenie img {
+    width: 100%;
+}
+
+.activities ul {
+    padding: 0px;
+}
+
+li {
+    display: inline-block;
+    padding: 0px 15px;
+    list-style-type: none;
+    width: 31%;
+}
+
+li img:hover {
+
+filter: grayscale(11);
+cursor: pointer;
+}
+
+.activity-image {
+    width: 100%;
+}
+
+.activity-image img {
     width: 100%;
 }
