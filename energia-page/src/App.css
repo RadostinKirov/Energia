@@ -1,38 +1,493 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import 'animate.css';
+
+
+
+html {
+    box-sizing: border-box;
+    max-width: 1400px;
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    display: flex;
+    padding: 2px 100px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-on-top {
+    justify-content: space-between;
+    z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.header-on-scroll {
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(230, 163, 21);
+    z-index: 10;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.activity-info,
+.activities,
+.contacts,
+.animate__animated,
+.animate__fadeIn {
+    animation-duration: 1s;
+}
+
+header .logo-on-scroll {
+    height: 100%;
+}
+
+header .logo-on-top {
+    height: 120%;
+    padding-top: 20px;
+}
+
+header .header-left img {
+    height: 100%;
+}
+
+
+header .header-right ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+
+header .header-right ul li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    padding: 15px;
+}
+
+header .link-active {
+    color: rgb(209, 40, 25);
+}
+
+header .link-inactive {
+    color: black;
+}
+
+.home {
+    position: relative;
+}
+
+.home h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home h1 {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    font-size: 60px;
+    color: #e6a315;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home button {
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 12px 22px;
+    transition: all 0.4s;
+    font-size: 14px
+}
+
+.home button:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 12px 22px;
+    transition: all 0.4s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.home .activity-image img {
+    width: 100%;
+
+}
+
+.home .activity-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us {
+    background-color: rgb(255, 249, 240);
+    padding-bottom: 80px;
+}
+
+.about-us .title {
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    
+}
+
+
+
+
+.about-us .title::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 10%;
+    display: block;
+    margin: 10px auto;
+}
+
+.about-us .container {
+    display: flex;
+}
+
+.about-us main {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.about-us aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 20px 0;
+}
+
+.map {
+    width: 100%;
+    border: 1px solid #e6a315;
+}
+
+.map iframe {
+    width: 100%;
+    border: 0;
+}
+
+.udostoverenie {
+    width: 100%;
+    border: 1px solid #e6a315;
+    position: relative;
+}
+
+.udostoverenie .arrow {
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+}
+
+.udostoverenie .left-btn{
+    left: 10px;
+}
+
+.udostoverenie .right-btn{
+    right: 10px;
+}
+
+.udostoverenie .arrow img {
+    filter: invert(49%) sepia(48%) saturate(14%) hue-rotate(335deg) brightness(93%) contrast(67%);
+}
+
+.udostoverenie .arrow img:hover {
+    filter: invert(44%) sepia(8%) saturate(62%) hue-rotate(22deg) brightness(96%) contrast(91%);
+}
+
+.udostoverenie .right-btn{
+    position: absolute;
+   }
+
+.udostoverenie img {
+    width: 100%;
+}
+
+.activities ul {
+    padding: 0px;
+}
+
+li {
+    display: inline-block;
+    padding: 15px 15px;
+    list-style-type: none;
+    width: 31%;
+}
+
+li img:hover {
+
+    filter: grayscale(11);
+    cursor: pointer;
+}
+
+.activity-image {
+    width: 100%;
+}
+
+.activity-image img {
+    width: 100%;
+}
+
+.activity-image {
+    position: relative;
+}
+
+.activity-image:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.activities .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.about-us {
+    background-color: rgb(255, 249, 240);
+    padding-bottom: 80px;
+}
+
+.activities .title {
+    font-size: 60px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.activities .title::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 10%;
+    display: block;
+    margin: 10px auto;
+}
+
+.contacts form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.contacts .input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts input {
+    font-family: inherit;
+    width: 350px;
+    height: 50px;
+    padding: 6px 12px;
+    margin-bottom: 50px;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+}
+
+.contacts textarea {
+    font-family: inherit;
+    width: 100%;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+
+.contacts .submit-btn {
+    width: 500px;
+    border: 2px solid #e6a315;
+    align-self: center;
+    color: #e6a315;
+    background-color: white;
+    font-weight: bold;
+}
+
+.contacts .submit-btn:hover {
+    background-color: #e6a315;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contacts .input-container input:focus {
+    outline: none !important;
+    border: 2px solid rgb(102, 175, 233);
+    box-shadow: 0 0 5px rgb(102, 175, 233);
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: rgb(102, 175, 233);
+    box-shadow: 0 0 5px rgb(102, 175, 233);
+}
+
+.contacts .title {
+    font-size: 60px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.contacts .title::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 10%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* 
+.contacts ul {
+    padding: 0px;
+} */
+
+/* .contacts .icon-container {
+    width: 40px;
+ height: 40px;
+    margin: 5px;
+    color: #e6a315;
+}
+
+.contacts .icon-container img {
+    width: 100%;
+} */
+
+.contacts ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+.contacts .icon {
+    width: 55px;
+
+}
+
+ul li:nth-child(2){
+    text-align: right;
+}
+
+.contacts .icon-container {
+    position: relative;
+}
+
+.contacts .icon {
+    position: absolute;
+    top: -18px;
+    left: -60px;
+}
+
+.contacts .icon img {
+    width: 100%;
+
+}
+
+.contacts span {
+    font-size: 24px;
+}
+
+.contacts ul span:hover{
+    color: rgb(230, 163, 21);
+    cursor: pointer;
+}
+
+.contacts ul a{
+    text-decoration: none;
+}
+
+.contacts b {
+    font-size: 24px;
+}
+
+.contacts .icon-container:hover {
+    color: #e6a315;
+    cursor: pointer;
+}
+
+
+footer {
+    background: #202020;
+    color: #e6a315;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(209, 40, 25);
+}
+
+footer a:hover {
+    color: rgb(230, 163, 21);
+}
+
+
+.contacts img:hover {
+    filter: none;
 }
