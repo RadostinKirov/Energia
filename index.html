@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Енергия ЕООД - energyeood.bg</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -33,19 +34,20 @@
             <div class="activity-image">
                 <img src="./1.jpg" alt="">
             </div>
-            <div class="activity-info">
-                <h3>ЕЛ МОНТАЖ И ИЗКОПНИ РАБОТИ</h3>
-                <h1>ЕНЕРГИЯ ЕООД</h1>
-                <h2>КАЗАНЛЪК</h2>
+            <div class="activity-info animate__fadeIn" style="animation-duration: 1s">
+                <h3 class="animate__animated animate__bounceIn" style="animation-duration: 1s">ЕЛ МОНТАЖ И ИЗКОПНИ
+                    РАБОТИ</h3>
+                <h1 class="animate__animated animate__bounce" style="animation-duration: 1s">ЕНЕРГИЯ ЕООД</h1>
+                <h2 class="animate__animated animate__bounceIn" style="animation-duration: 1s">КАЗАНЛЪК</h2>
                 <button>НАУЧИ ПОВЕЧЕ</button>
             </div>
         </article>
     </section>
 
     <section class="about-us">
-        <h1 class="title">За нас</h1>
+        <h1 class="title animate__animated animate__bounceIn">За нас</h1>
         <div class="container">
-            <main>
+            <main class="activity-info animate__fadeInLeft" style="animation-duration: 1s">
                 <p>&emsp;"Енергия" ЕООД е създадена през 2001 г. Основна дейност е изграждане на силови разпределителни
                     мрежи
                     и трафопостове, изкопни работи, транспорт и специализирана техника. В процеса на работа сме
@@ -92,7 +94,7 @@
                 <p> 43.34 Боядисване и стъклопоставяне;</p>
                 <p> 43.39 Други довършителни строителни дейности.</p>
             </main>
-            <aside>
+            <aside class="activity-info animate__fadeInRight" style="animation-duration: 1s">
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.2918401721954!2d25.40224301496938!3d42.612766227098504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a851550e2270c1%3A0x705852d28b3490d9!2z0JXQvdC10YDQs9C40Y8g0JXQntCe0JQsINCz0YAuINCa0LDQt9Cw0L3Qu9GK0Lo!5e0!3m2!1sbg!2sbg!4v1661190336407!5m2!1sbg!2sbg"
@@ -101,78 +103,152 @@
                 </div>
                 <div class="udostoverenie">
                     <img src="./Slide1.JPG" alt="">
+                    <a class="arrow left-btn" href="">
+                        <img src="./arrow-left.svg" alt="">
+                    </a>
+                    
+                    <a class="arrow right-btn" href="">
+                        <img src="./arrow-right.svg" alt="">
+                    </a>
+                    
                 </div>
             </aside>
         </div>
     </section>
 
-    <section class="activities">
-        
-        <h1 class="title">Дейности</h1>
+    <section class="activities animate__fadeIn" style="animation-duration: 1s">
+
+        <h1 class="title animate__animated animate__bounceIn" style="animation-duration: 1s">Дейности</h1>
+
         <ul class="container">
 
             <li class="activity-box">
                 <div class="activity-image">
                     <img src="./portfolio-img-1.JPG" alt="">
-                </div>
-                <div class="activity-title">
-                    <p>Изкопни работи</p>
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
                 </div>
             </li>
 
             <li class="activity-box">
                 <div class="activity-image">
                     <img src="./portfolio-img-1.JPG" alt="">
-                </div>
-                <div class="activity-title">
-                    <p>Изкопни работи</p>
-                </div>
-            </li>
-
-            
-            <li class="activity-box">
-                <div class="activity-image">
-                    <img src="./portfolio-img-1.JPG" alt="">
-                </div>
-                <div class="activity-title">
-                    <p>Изкопни работи</p>
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
                 </div>
             </li>
 
-            
             <li class="activity-box">
                 <div class="activity-image">
                     <img src="./portfolio-img-1.JPG" alt="">
-                </div>
-                <div class="activity-title">
-                    <p>Изкопни работи</p>
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
                 </div>
             </li>
 
-            
             <li class="activity-box">
                 <div class="activity-image">
                     <img src="./portfolio-img-1.JPG" alt="">
-                </div>
-                <div class="activity-title">
-                    <p>Изкопни работи</p>
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
                 </div>
             </li>
 
-            
             <li class="activity-box">
                 <div class="activity-image">
                     <img src="./portfolio-img-1.JPG" alt="">
-                </div>
-                <div class="activity-title">
-                    <p>Изкопни работи</p>
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
                 </div>
             </li>
+
+            <li class="activity-box">
+                <div class="activity-image">
+                    <img src="./portfolio-img-1.JPG" alt="">
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="activity-box">
+                <div class="activity-image">
+                    <img src="./portfolio-img-1.JPG" alt="">
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="activity-box">
+                <div class="activity-image">
+                    <img src="./portfolio-img-1.JPG" alt="">
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="activity-box">
+                <div class="activity-image">
+                    <img src="./portfolio-img-1.JPG" alt="">
+                    <div class="overlay">
+                        <div class="text">Изкопни работи</div>
+                    </div>
+                </div>
+            </li>
+
 
         </ul>
     </section>
+
+
+    <section class="contacts animate__fadeIn" style="animation-duration: 1s">
+
+        <h1 class="title animate__animated animate__bounceIn" style="animation-duration: 1s">Контакти</h1>
+        <address>
+            <ul>
+                <li class="animate__animated animate__bounceIn" style="animation-duration: 1s">
+                    <a class="icon-container" href="">
+                        <div class="icon">
+                            <img src="./callus.png" alt="">
+                        </div>
+                    </a>
+                    <span>0887/ 353 423</span> <b>&nbsp;или&nbsp;</b> <span>0431/ 62 800</span>
+
+                </li>
+
+                <li class="animate__animated animate__bounceIn" style="animation-duration: 1s">
+                    <a class="icon-container" href="">
+                        <div class="icon">
+                            <img src="./emailus.png" alt="">
+                        </div>
+                        <span>office@energyeood.bg</span>
+                    </a>
+
+            </ul>
+        </address>
+
+        <form action="">
+            <div class="input-container">
+                <input class="name" type="text" name="name" placeholder="Име">
+                <input class="email" type="text" name="email" placeholder="E-mail">
+                <input class="theme" type="text" name="theme" placeholder="Тема">
+            </div>
+            <textarea class="message" name="message" id="" cols="30" rows="10" placeholder="Съобщение"></textarea>
+            <input class="submit-btn" type="submit" value="Изпрати запитване">
+
+        </form>
+    </section>
     <footer>
-        <p>Copyright © www.energyeood.bg - Енергия ЕООД, гр. Казанлък - 2017</p>
+        <address class="animate__fadeIn" style="animation-duration: 1s">
+            <p class="animate__animated animate__bounceIn" style="animation-duration: 1s">Copyright © www.energyeood.bg - Енергия ЕООД, гр. Казанлък - 2017</p>
+        </address>
         <a href="">Изработка и дизайн от www.StudioKazanlak.com</a>
     </footer>
 
