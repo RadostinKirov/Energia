@@ -1,0 +1,67 @@
+
+header {
+    display: flex;
+    padding: 2px 100px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+.header-on-top {
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.header-on-scroll {
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(230, 163, 21);
+    z-index: 10;
+}
+
+.activity-info,
+.activities,
+.contacts,
+.animate__animated,
+.animate__fadeIn {
+    animation-duration: 1s;
+}
+
+header .logo-on-scroll {
+    height: 100%;
+}
+
+header .logo-on-top {
+    height: 120%;
+    padding-top: 20px;
+}
+
+header .header-left img {
+    height: 100%;
+}
+
+
+header .header-right ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+
+header .header-right ul li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    padding: 15px;
+}
+
+header .link-active {
+    color: rgb(209, 40, 25);
+}
+
+header .link-inactive {
+    color: black;
+}

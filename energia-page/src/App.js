@@ -1,25 +1,15 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 import picture1 from './assets/1.jpg';
 import udostoverenie from './assets/Slide1.JPG';
+import activityPicture from './assets/portfolio-img-1.JPG';
+import Header from './components/Header/Header';
+
 
 function App() {
   return (
     <div>
-
-      <header className="header-on-scroll">
-        <div className="header-left logo-on-scroll">
-          <a href=""><img src="./assets/logo.png" alt="ЕнергияЕООД" /></a>
-        </div>
-        <div className="header-right"> 
-          <ul>
-            <li><a className="link-active" href="">НАЧАЛО</a></li>
-            <li><a className="link-inactive" href="">ЗА НАС</a></li>
-            <li><a className="link-inactive" href="">ДЕЙНОСТИ</a></li>
-            <li><a className="link-inactive" href="">КОНТАКТИ</a></li>
-          </ul>
-        </div>
-      </header>
- 
+      <Header />
       <section className="home">
         <article className="activity">
 
@@ -36,7 +26,7 @@ function App() {
         </article>
       </section>
 
-       <section className="about-us">
+      <section className="about-us">
         <h1 className="title animate__animated animate__bounceIn">За нас</h1>
         <div className="container">
           <main className="activity-info animate__fadeInLeft">
@@ -116,7 +106,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -125,7 +115,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -134,7 +124,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -143,7 +133,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -152,7 +142,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -161,7 +151,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -170,7 +160,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -179,7 +169,7 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
@@ -188,12 +178,13 @@ function App() {
 
           <li className="activity-box">
             <div className="activity-image">
-              <img src="./portfolio-img-1.JPG" alt="" />
+              <img src={activityPicture} alt="" />
               <div className="overlay">
                 <div className="text">Изкопни работи</div>
               </div>
             </div>
           </li>
+
 
 
         </ul>
@@ -242,7 +233,7 @@ function App() {
           <p className="animate__animated animate__bounceIn" >Copyright © www.energyeood.bg - Енергия ЕООД, гр.Казанлък - 2017</p>
         </address>
         <a href="">Изработка и дизайн от www.StudioKazanlak.com</a>
-      </footer> 
+      </footer>
 
     </div>
   );
