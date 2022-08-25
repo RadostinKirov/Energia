@@ -1,7 +1,14 @@
 import './Home.css';
 import picture1 from '../../assets/1.jpg';
+import { getAllHomeData } from '../service/service';
 
 const Home = () => {
+
+ getAllHomeData().then(
+   result => {
+     console.log('result -> ', result);
+   }
+ )
 
     return (
       

@@ -136,3 +136,8 @@ ul li:nth-child(2){
     color: #e6a315;
     cursor: pointer;
 }
+
+
+.contacts img:hover {
+    filter: none;
+}

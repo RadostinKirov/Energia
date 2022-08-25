@@ -8,23 +8,22 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Activities from './components/Activities/Activities';
 import Contacts from './components/Contacts/Contacts';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
   return (
     <div>
       <Header />
-      <Home />
-      <About />
-      <Activities />
-      <Contacts />
-      <footer>
-        <address className="animate__fadeIn" >
-          <p className="animate__animated animate__bounceIn" >Copyright © www.energyeood.bg - Енергия ЕООД, гр.Казанлък - 2017</p>
-        </address>
-        <a href="">Изработка и дизайн от www.StudioKazanlak.com</a>
-      </footer>
 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }

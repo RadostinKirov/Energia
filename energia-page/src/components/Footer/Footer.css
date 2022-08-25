@@ -1,0 +1,17 @@
+
+footer {
+    background: #202020;
+    color: #e6a315;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(209, 40, 25);
+}
+
+footer a:hover {
+    color: rgb(230, 163, 21);
+}
