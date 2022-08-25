@@ -1,4 +1,5 @@
 import './Header.css';
+import logo from './assets/logo.png';
 
 const Header = () => {
     
@@ -6,7 +7,7 @@ const Header = () => {
 
         <header className="header-on-scroll">
         <div className="header-left logo-on-scroll">
-          <a href=""><img src="./assets/logo.png" alt="ЕнергияЕООД" /></a>
+          <a href=""><img src={logo} alt="ЕнергияЕООД" /></a>
         </div>
         <div className="header-right">
           <ul>

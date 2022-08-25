@@ -1,0 +1,69 @@
+
+.home {
+    position: relative;
+}
+
+.home h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home h1 {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    font-size: 60px;
+    color: #e6a315;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home button {
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 12px 22px;
+    transition: all 0.4s;
+    font-size: 14px
+}
+
+.home button:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 12px 22px;
+    transition: all 0.4s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.home .activity-image img {
+    width: 100%;
+
+}
+
+.home .activity-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,31 +1,17 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import picture1 from './assets/1.jpg';
+
 import udostoverenie from './assets/Slide1.JPG';
 import activityPicture from './assets/portfolio-img-1.JPG';
 import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 
 
 function App() {
   return (
     <div>
       <Header />
-      <section className="home">
-        <article className="activity">
-
-          <div className="activity-image">
-            <img src={picture1} alt="" />
-          </div>
-          <div className="activity-info animate__fadeIn">
-            <h3 className="animate__animated animate__bounceIn">ЕЛ МОНТАЖ И ИЗКОПНИ
-              РАБОТИ</h3>
-            <h1 className="animate__animated animate__bounce">ЕНЕРГИЯ ЕООД</h1>
-            <h2 className="animate__animated animate__bounceIn">КАЗАНЛЪК</h2>
-            <button>НАУЧИ ПОВЕЧЕ</button>
-          </div>
-        </article>
-      </section>
-
+      <Home />
       <section className="about-us">
         <h1 className="title animate__animated animate__bounceIn">За нас</h1>
         <div className="container">
