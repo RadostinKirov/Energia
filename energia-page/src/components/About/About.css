@@ -1,0 +1,97 @@
+
+.about-us {
+    background-color: rgb(255, 249, 240);
+    padding-bottom: 80px;
+}
+
+.about-us .title {
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    
+}
+
+
+
+
+.about-us .title::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 10%;
+    display: block;
+    margin: 10px auto;
+}
+
+.about-us .container {
+    display: flex;
+}
+
+.about-us main {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.about-us aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 20px 0;
+}
+
+.map {
+    width: 100%;
+    border: 1px solid #e6a315;
+}
+
+.map iframe {
+    width: 100%;
+    border: 0;
+}
+
+.udostoverenie {
+    width: 100%;
+    border: 1px solid #e6a315;
+    position: relative;
+}
+
+.udostoverenie .arrow {
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+}
+
+.udostoverenie .left-btn{
+    left: 10px;
+}
+
+.udostoverenie .right-btn{
+    right: 10px;
+}
+
+.udostoverenie .arrow img {
+    filter: invert(49%) sepia(48%) saturate(14%) hue-rotate(335deg) brightness(93%) contrast(67%);
+}
+
+.udostoverenie .arrow img:hover {
+    filter: invert(44%) sepia(8%) saturate(62%) hue-rotate(22deg) brightness(96%) contrast(91%);
+}
+
+.udostoverenie .right-btn{
+    position: absolute;
+   }
+
+.udostoverenie img {
+    width: 100%;
+}
+
+.activities ul {
+    padding: 0px;
+}
