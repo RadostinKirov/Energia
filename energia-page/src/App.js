@@ -2,10 +2,11 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 
-import activityPicture from './assets/portfolio-img-1.JPG';
+
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Activities from './components/Activities/Activities';
 
 
 function App() {
@@ -14,99 +15,8 @@ function App() {
       <Header />
       <Home />
       <About />
+      <Activities />
  
-      <section className="activities animate__fadeIn">
-
-        <h1 className="title animate__animated animate__bounceIn">Дейности</h1>
-
-        <ul className="container">
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-          <li className="activity-box">
-            <div className="activity-image">
-              <img src={activityPicture} alt="" />
-              <div className="overlay">
-                <div className="text">Изкопни работи</div>
-              </div>
-            </div>
-          </li>
-
-
-
-        </ul>
-      </section>
-
       <section className="contacts animate__fadeIn">
 
         <h1 className="title animate__animated animate__bounceIn">Контакти</h1>

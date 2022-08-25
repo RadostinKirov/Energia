@@ -1,0 +1,72 @@
+
+li {
+    display: inline-block;
+    padding: 15px 15px;
+    list-style-type: none;
+    width: 31%;
+}
+
+li img:hover {
+
+    filter: grayscale(11);
+    cursor: pointer;
+}
+
+.activity-image {
+    width: 100%;
+}
+
+.activity-image img {
+    width: 100%;
+}
+
+.activity-image {
+    position: relative;
+}
+
+.activity-image:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.activities .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.activities .title {
+    font-size: 60px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.activities .title::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 10%;
+    display: block;
+    margin: 10px auto;
+}
