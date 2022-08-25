@@ -1,0 +1,138 @@
+
+
+
+.contacts .input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts input {
+    font-family: inherit;
+    width: 350px;
+    height: 50px;
+    padding: 6px 12px;
+    margin-bottom: 50px;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+}
+
+.contacts textarea {
+    font-family: inherit;
+    width: 100%;
+    border: 2px solid #CCC;
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+
+.contacts .submit-btn {
+    width: 500px;
+    border: 2px solid #e6a315;
+    align-self: center;
+    color: #e6a315;
+    background-color: white;
+    font-weight: bold;
+}
+
+.contacts .submit-btn:hover {
+    background-color: #e6a315;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contacts .input-container input:focus {
+    outline: none !important;
+    border: 2px solid rgb(102, 175, 233);
+    box-shadow: 0 0 5px rgb(102, 175, 233);
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: rgb(102, 175, 233);
+    box-shadow: 0 0 5px rgb(102, 175, 233);
+}
+
+.contacts .title {
+    font-size: 60px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.contacts .title::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 10%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* 
+.contacts ul {
+    padding: 0px;
+} */
+
+/* .contacts .icon-container {
+    width: 40px;
+ height: 40px;
+    margin: 5px;
+    color: #e6a315;
+}
+
+.contacts .icon-container img {
+    width: 100%;
+} */
+
+.contacts ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+.contacts .icon {
+    width: 55px;
+
+}
+
+ul li:nth-child(2){
+    text-align: right;
+}
+
+.contacts .icon-container {
+    position: relative;
+}
+
+.contacts .icon {
+    position: absolute;
+    top: -18px;
+    left: -60px;
+}
+
+.contacts .icon img {
+    width: 100%;
+
+}
+
+.contacts span {
+    font-size: 24px;
+}
+
+.contacts ul span:hover{
+    color: rgb(230, 163, 21);
+    cursor: pointer;
+}
+
+.contacts ul a{
+    text-decoration: none;
+}
+
+.contacts b {
+    font-size: 24px;
+}
+
+.contacts .icon-container:hover {
+    color: #e6a315;
+    cursor: pointer;
+}
