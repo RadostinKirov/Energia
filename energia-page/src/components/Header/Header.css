@@ -3,14 +3,19 @@ header {
     display: flex;
     padding: 2px 100px;
     height: 50px;
-    position: absolute;
+    position: fixed;
     left: 0px;
     right: 0px;
+    transition: 0.3s;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .header-on-top {
     justify-content: space-between;
     z-index: 10;
+    align-items: center;
+    transition: 0.3s;
 }
 
 .header-on-scroll {
@@ -18,7 +23,10 @@ header {
     align-items: center;
     background-color: rgb(230, 163, 21);
     z-index: 10;
+    transition: 0.3s;
 }
+
+
 
 .activity-info,
 .activities,
@@ -30,11 +38,13 @@ header {
 
 header .logo-on-scroll {
     height: 100%;
+    transition: 0.3s;
 }
 
 header .logo-on-top {
     height: 120%;
     padding-top: 20px;
+    transition: 0.3s;
 }
 
 header .header-left img {
@@ -64,4 +74,9 @@ header .link-active {
 
 header .link-inactive {
     color: black;
+}
+
+header ul li a:hover {
+    color: rgb(209, 40, 25);
+    transition: 0.3s; 
 }

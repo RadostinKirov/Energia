@@ -2,6 +2,7 @@ import './Footer.css';
 
 const Footer = () => {
 
+    
     return (
         <footer>
             <address className="animate__fadeIn" >

@@ -6,6 +6,7 @@ import ActivityCard from './ActivityCard';
 
 const Activities = () => {
 
+ 
   const [activities, setActivities] = useState({});
 
 

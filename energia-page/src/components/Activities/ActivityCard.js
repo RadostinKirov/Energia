@@ -1,4 +1,3 @@
-import activityPicture from './portfolio-img-1.JPG';
 
 const ActivityCard = (activityInfo) => {
 
