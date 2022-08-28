@@ -7,22 +7,39 @@ import { useEffect, useState } from 'react';
 const About = () => {
 
   const [image, setImage] = useState(imagesArr[0]);
+  const [imageIndex, setImageIndex] = useState(1);
   console.log(imagesArr);
 
-
   useEffect(() => {
-    let i = 0;
-    const timerId = setInterval(() => {
-      setImage(imagesArr[i]);
-      i++;
-      if (i == 5) {
-        i = 0;
-      }
-    }, 2000)
+    // let i = 0;
+    // const timerId = setInterval(() => {
+    //   setImage(imagesArr[i]);
+    //   i++;
+    //   if (i == 5) {
+    //     i = 0;
+    //   }
+    // }, 2000)
 
-    return () => { clearInterval(timerId) };
-  }, []
-  )
+    // return () => { clearInterval(timerId) };
+  }, [] 
+   );
+
+   const onLeftClick = () => {
+
+   }
+
+   const onRightClick = (e) => {
+     e.preventDefault();
+
+     if(imageIndex < imagesArr.length - 1){
+      setImageIndex(imageIndex + 1);
+      setImage(imagesArr[imageIndex]);
+    }else {
+      setImageIndex(0);
+      setImage(imagesArr[imageIndex]);
+    }
+   }
+
   return (
 
     <section className="about-us">
@@ -84,11 +101,11 @@ const About = () => {
           </div>
           <div className="udostoverenie">
             <img src={image} alt="" />
-            <a className="arrow left-btn" href="">
+            <a onClick={onLeftClick} className="arrow left-btn" href="">
               <img src={leftArrow} alt="" />
             </a>
 
-            <a className="arrow right-btn" href="">
+            <a onClick={onRightClick} className="arrow right-btn" href="">
               <img src={rightArrow} alt="" />
             </a>
 
