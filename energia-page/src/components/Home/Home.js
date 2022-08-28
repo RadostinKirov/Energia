@@ -1,11 +1,14 @@
 import './Home.css';
 import picture1 from '../../assets/1.jpg';
 import { getAllHomeData } from '../service/service';
+import { useState } from 'react';
 
 const Home = () => {
 
+  const [data, setData] = useState([]);
  getAllHomeData().then(
    result => {
+  //   setData(result);
      console.log('result -> ', result);
    }
  )

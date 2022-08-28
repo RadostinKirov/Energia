@@ -1,20 +1,20 @@
 import './Header.css';
 import logo from './assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
 const Header = () => {
 
   const [headerClass, setHeaderClass] = useState('header-on-top');
   const [logoClass, setLogoClass] = useState('header-left logo-on-top');
-  const location = useLocation().pathname;
+  const [activeTab, setActiveTab] = useState('home');
+const location = useLocation();
 
   window.addEventListener("scroll", () => {
     if (typeof window != 'undefined') {
       if (window.scrollY > 100) {
         setHeaderClass('header-on-scroll');
         setLogoClass('header-left logo-on-scroll');
-        console.log(location)
 
       } else {
         setHeaderClass('header-on-top');
@@ -28,7 +28,18 @@ const Header = () => {
   );
 
 
-  
+  const setActive = (e) => {
+    
+    console.log(e);
+    switch (e.target.pathname) {
+      case "/": setActiveTab('home'); break;
+      case "/about": setActiveTab('about'); break;
+      case "/activities": setActiveTab('activities'); break;
+      case "/contacts": setActiveTab('contacts'); break;
+      default: setActiveTab('');
+    }
+    console.log(activeTab)
+  }
 
 
   return (
@@ -36,14 +47,14 @@ const Header = () => {
     <header className={headerClass} >
 
       <div className={logoClass}>
-        <Link to="/" ><img src={logo} alt="ЕнергияЕООД" /></Link>
+        <Link to="/" onClick={setActive} ><img src={logo} alt="ЕнергияЕООД" /></Link>
       </div>
       <div className="header-right">
         <ul>
-          <li><Link to="/" className="link-active" >НАЧАЛО</Link></li>
-          <li><Link to="/about" className="link-inactive" >ЗА НАС</Link></li>
-          <li><Link to="/activities" className="link-inactive" >ДЕЙНОСТИ</Link></li>
-          <li><Link to="/contacts" className="link-inactive" >КОНТАКТИ</Link></li>
+          <li><Link to="/" onClick={setActive} className={activeTab === 'home' ? 'link-active' : 'link-inactive'} >НАЧАЛО</Link></li>
+          <li><Link to="/about" onClick={setActive} className={activeTab === 'about' ? 'link-active' : 'link-inactive'} >ЗА НАС</Link></li>
+          <li><Link to="/activities" onClick={setActive} className={activeTab === 'activities' ? 'link-active' : 'link-inactive'} >ДЕЙНОСТИ</Link></li>
+          <li><Link to="/contacts" onClick={setActive} className={activeTab === 'contacts' ? 'link-active' : 'link-inactive'} >КОНТАКТИ</Link></li>
         </ul>
       </div>
     </header>
