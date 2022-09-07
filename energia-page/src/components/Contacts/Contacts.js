@@ -43,6 +43,12 @@ const Contacts = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+   
+    let   data = new FormData(e.currentTarget);
+    let inputName = data.get('name');
+    let inputEmail = data.get('email');
+    let inputTitle = data.get('title');
+    let inputMessage = data.get('message');
 
     if (!name) {
       setInputEmpty(true);
@@ -72,6 +78,11 @@ const Contacts = () => {
       setMessageEmpty(true);
     } else {
       setMessageEmpty(false);
+    }
+
+    const dataValid = Boolean(name && email && validate(email) && title && message)
+    if(dataValid){
+      console.log(inputName, inputEmail, inputTitle, inputMessage);
     }
   }
 
