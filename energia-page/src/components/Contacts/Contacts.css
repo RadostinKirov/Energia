@@ -13,7 +13,7 @@
 
 .contacts .input-field-container p {
     position: absolute;
-    top: 60px;
+    bottom: 7px;
     left: 10px;
     color: red;
 }
@@ -54,13 +54,19 @@
     transition: 0.4s;
 }
 
+.contacts #message-container {
+    width: 100%;
+}
+
 .contacts .input-container input:focus {
     outline: none !important;
     border: 2px solid rgb(102, 175, 233);
     box-shadow: 0 0 5px rgb(102, 175, 233);
 }
 
-.contacts .input-container .invalid , .contacts .input-container .invalid:focus{
+.contacts .input-container .invalid ,
+.contacts #message-container .invalid,
+ .contacts .input-container .invalid:focus{
    
     border: 2px solid red;
     box-shadow: 0 0 5px red;
@@ -70,6 +76,7 @@ textarea:focus {
     border-color: rgb(102, 175, 233);
     box-shadow: 0 0 5px rgb(102, 175, 233);
 }
+
 
 .contacts .title {
     font-size: 60px;
@@ -87,21 +94,6 @@ textarea:focus {
     margin: 10px auto;
 }
 
-/* 
-.contacts ul {
-    padding: 0px;
-} */
-
-/* .contacts .icon-container {
-    width: 40px;
- height: 40px;
-    margin: 5px;
-    color: #e6a315;
-}
-
-.contacts .icon-container img {
-    width: 100%;
-} */
 
 .contacts ul {
     padding: 0;
