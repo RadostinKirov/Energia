@@ -6,9 +6,21 @@
     justify-content: space-between;
 }
 
+.contacts .input-field-container {
+    position: relative;
+    width: 30%;
+}
+
+.contacts .input-field-container p {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    color: red;
+}
+
 .contacts input {
     font-family: inherit;
-    width: 350px;
+    width: 100%;
     height: 50px;
     padding: 6px 12px;
     margin-bottom: 50px;
@@ -22,10 +34,12 @@
     border: 2px solid #CCC;
     border-radius: 4px;
     margin-bottom: 50px;
+    padding: 12px;
 }
 
 .contacts .submit-btn {
-    width: 500px;
+    font-size: 19px;
+    width: 50%;
     border: 2px solid #e6a315;
     align-self: center;
     color: #e6a315;
@@ -46,6 +60,11 @@
     box-shadow: 0 0 5px rgb(102, 175, 233);
 }
 
+.contacts .input-container .invalid , .contacts .input-container .invalid:focus{
+   
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
+}
 textarea:focus {
     outline: none !important;
     border-color: rgb(102, 175, 233);

@@ -3,7 +3,7 @@
 export async function getAllHomeData() {
 
     try {
-        let response = await fetch('http://localhost:1337/api/home-page-contents', {
+        let response = await fetch('http://localhost:1337/api/home-page-contents?populate=*', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

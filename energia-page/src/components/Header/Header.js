@@ -12,7 +12,7 @@ const location = useLocation();
 
   window.addEventListener("scroll", () => {
     if (typeof window != 'undefined') {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setHeaderClass('header-on-scroll');
         setLogoClass('header-left logo-on-scroll');
 

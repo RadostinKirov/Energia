@@ -5,40 +5,80 @@ import rightArrow from './assets/arrow-right.svg';
 import { useEffect, useState } from 'react';
 
 const About = () => {
+  const [imageIndex, setImageIndex] = useState(0);
 
   const [image, setImage] = useState(imagesArr[0]);
-  const [imageIndex, setImageIndex] = useState(1);
+  const [resetTimer, setResetTimer] = useState(false);
+  const [imageClass, setImageClass] = useState('animate__animated animate__fadeInRight');
+
   console.log(imagesArr);
 
-  useEffect(() => {
-    // let i = 0;
-    // const timerId = setInterval(() => {
-    //   setImage(imagesArr[i]);
-    //   i++;
-    //   if (i == 5) {
-    //     i = 0;
-    //   }
-    // }, 2000)
+  // useEffect(() => {
+  //   let i = 0;
+  //   const timerId = setInterval(() => {
+  //     setImage(imagesArr[i]);
+  //     i++;
+  //     if (i == 5) {
+  //       i = 0;
+  //     }
+  //     console.log('test');
+  //   }, 5000)
 
-    // return () => { clearInterval(timerId) };
-  }, [] 
-   );
+  //   if (resetTimer) {
+  //     clearInterval(timerId);
 
-   const onLeftClick = () => {
+  //     const timerId = setInterval(() => {
+  //       setImage(imagesArr[i]);
+  //       i++;
+  //       if (i == 5) {
+  //         i = 0;
+  //       }
+  //       console.log('test');
+  //     }, 5000);
 
-   }
+  //     setResetTimer(false);
+  //   }
 
-   const onRightClick = (e) => {
-     e.preventDefault();
+  //   return () => { clearInterval(timerId) };
+  // }, []
+  // );
 
-     if(imageIndex < imagesArr.length - 1){
+
+  const onRightClick = (e) => {
+    e.preventDefault();
+
+    if (imageIndex < imagesArr.length - 1) {
+      setImage(imagesArr[imageIndex + 1]);
       setImageIndex(imageIndex + 1);
-      setImage(imagesArr[imageIndex]);
-    }else {
+      console.log('Image index -> ', imageIndex);
+      setResetTimer(true);
+      setImageClass('animate__animated animate__fadeinLeft');
+    } else {
+      setImage(imagesArr[0]);
       setImageIndex(0);
-      setImage(imagesArr[imageIndex]);
+      console.log('Image index -> ', imageIndex);
+      setResetTimer(true);
+      setImageClass('animate__animated animate__fadeInLeft');
     }
-   }
+  }
+
+  const onLeftClick = (e) => {
+    e.preventDefault();
+
+    if (imageIndex > 0) {
+      setImage(imagesArr[imageIndex - 1]);
+      setImageIndex(imageIndex - 1);
+      console.log('Image index -> ', imageIndex);
+      setResetTimer(true);
+
+    } else {
+      setImage(imagesArr[4]);
+      setImageIndex(4);
+      console.log('Image index -> ', imageIndex);
+      setResetTimer(true);
+
+    }
+  }
 
   return (
 
@@ -100,7 +140,7 @@ const About = () => {
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div className="udostoverenie">
-            <img src={image} alt="" />
+            <img src={image} className={imageClass} alt="" />
             <a onClick={onLeftClick} className="arrow left-btn" href="">
               <img src={leftArrow} alt="" />
             </a>

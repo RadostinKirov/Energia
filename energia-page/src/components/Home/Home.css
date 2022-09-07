@@ -3,6 +3,11 @@
     position: relative;
 }
 
+.animate__animated,
+.animate__fadeIn {
+    animation-duration: 2s;
+}
+
 .home h3 {
     font-size: 24px;
     color: white;
@@ -55,6 +60,7 @@
 
 .home .activity-image img {
     width: 100%;
+    animation-duration: 2s;
 
 }
 

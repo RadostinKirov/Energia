@@ -14,6 +14,11 @@
     
 }
 
+.animate__animated,
+.animate__fadeInRight,
+.animate__fadeOutLeft {
+    animation-duration: 1s;
+}
 
 
 
@@ -40,6 +45,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 20px 20px 0;
+   
 }
 
 .map {
