@@ -1,67 +1,11 @@
 import './Home.css';
 import { getAllHomeData } from '../service/service';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { HOST } from "../../config/config";
 import { Link } from 'react-router-dom';
 
 import HomeActivitieCard from './HomeActivitieCard';
 
-// const Home = () => {
-
-//   const [activities, setActivities] = useState({});
-
-//   useEffect(() => {
-//     let activitiesData;
-//     getAllHomeData().then(
-//       result => {
-//         console.log(result)
-//         result.data.map(x => {
-//           x.attributes.visibility = 'none';
-//         })
-//         setActivities(result);
-//       }
-//     )
-//   }, []);
-
-//   useEffect(() => {
-//     if (activities.hasOwnProperty('data')) {
-//       const slideShowSetinterval = setInterval(() => {
-//         showSlides();
-//       }, 2000);
-//       setSlideShow(slideShowSetinterval);
-//     }
-//   }, [activities])
-
-
-//   let i = 0;
-//   function showSlides() {
-//     for (let j = 0; j < activities.data.length - 1; j++) {
-//       activities.data[i].attributes.visibility = 'none';
-//     }
-
-//     activities.data[i].attributes.visibility = "block";
-//     setActivities({ ...activities.data[i].attributes.visibility = "block" })
-
-//     console.log(`for image ${i} the visibility is changed to block`)
-//     if (i == activities.data.length - 1) {
-//       i = 0;
-//     } else {
-//       i++;
-//     }
-//   }
-//   return (
-
-//     <section className="home">
-//       <article className="activity">
-
-//         {activities.data
-//           ? activities.data.map(x => <HomeActivitieCard key={x.id} activityInfo={x.attributes} />)
-//           : ""}
-
-//       </article>
-//     </section>
-//   )
-// }
 
 const Home = () => {
 
@@ -130,6 +74,63 @@ const Home = () => {
 
   )
 }
+
+// const Home = () => {
+
+//   const [activities, setActivities] = useState({});
+
+//   useEffect(() => {
+//     let activitiesData;
+//     getAllHomeData().then(
+//       result => {
+//         console.log(result)
+//         result.data.map(x => {
+//           x.attributes.visibility = 'none';
+//         })
+//         setActivities(result);
+//       }
+//     )
+//   }, []);
+
+//   useEffect(() => {
+//     if (activities.hasOwnProperty('data')) {
+//       const slideShowSetinterval = setInterval(() => {
+//         showSlides();
+//       }, 2000);
+//       setSlideShow(slideShowSetinterval);
+//     }
+//   }, [activities])
+
+
+//   let i = 0;
+//   function showSlides() {
+//     for (let j = 0; j < activities.data.length - 1; j++) {
+//       activities.data[i].attributes.visibility = 'none';
+//     }
+
+//     activities.data[i].attributes.visibility = "block";
+//     setActivities({ ...activities.data[i].attributes.visibility = "block" })
+
+//     console.log(`for image ${i} the visibility is changed to block`)
+//     if (i == activities.data.length - 1) {
+//       i = 0;
+//     } else {
+//       i++;
+//     }
+//   }
+//   return (
+
+//     <section className="home">
+//       <article className="activity">
+
+//         {activities.data
+//           ? activities.data.map(x => <HomeActivitieCard key={x.id} activityInfo={x.attributes} />)
+//           : ""}
+
+//       </article>
+//     </section>
+//   )
+// }
 
 
 export default Home;
