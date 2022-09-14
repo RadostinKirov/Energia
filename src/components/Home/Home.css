@@ -1,11 +1,52 @@
 
 .home {
     position: relative;
+    height: 1050px;
 }
 
-.animate__animated,
-.animate__fadeIn {
+@keyframes fade-in {
+    from {
+        transform: translate3d(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(1400px , 0 , 0 ,0);
+        opacity: 1;
+    }
+  
+  }
+ 
+.home .activity {
+    position: relative;
+}
+
+.home .activity h1, 
+.home .activity h2,
+.home .activity h3 {
+    text-align: center;
+}
+
+.home .activity-image, .home .activity-info {
+    /* position: absolute; */
+    /* display: none; */
+}
+
+.activity-image img {
     animation-duration: 2s;
+}
+
+.home .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.home .spinner {
+    width: 160px;
+    height: 160px;
+    background-image: url(../images/bx_loader.gif);
 }
 
 .home h3 {
@@ -33,7 +74,7 @@
     margin-bottom: 10px;
 }
 
-.home button {
+.home .moreBtn {
     margin-top: 50px;
     background: rgba(0, 0, 0, 0.6);
     border: none;
@@ -42,10 +83,11 @@
     margin-top: 40px;
     padding: 12px 22px;
     transition: all 0.4s;
-    font-size: 14px
+    font-size: 14px;
+    text-decoration: none;
 }
 
-.home button:hover {
+.home .moreBtn:hover {
     background: rgba(255, 255, 255, 0.6);
     color: black;
     margin-top: 50px;
@@ -60,7 +102,8 @@
 
 .home .activity-image img {
     width: 100%;
-    animation-duration: 2s;
+    animation-name: fade-in;
+    animation-duration: 4s;
 
 }
 

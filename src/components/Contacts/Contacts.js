@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Contacts.css';
-import { validate } from 'react-email-validator'
+import { validate } from 'react-email-validator';
+import emailjs from '@emailjs/browser';
+
 
 const Contacts = () => {
   const [name, setName] = useState('');
@@ -12,6 +14,7 @@ const Contacts = () => {
   const [emailInvalid, setEmailInvalid] = useState(false);
   const [titleEmpty, setTitleEmpty] = useState(false);
   const [messageEmpty, setMessageEmpty] = useState(false);
+  const form = useRef();
 
   const onChangeNameHandler = (e) => {
     setName(e.target.value);
@@ -24,6 +27,7 @@ const Contacts = () => {
     setEmail(e.target.value);
     if (e.target.value) {
       setEmailEmpty(false);
+      setEmailInvalid(false);
     }
   }
 
@@ -43,8 +47,8 @@ const Contacts = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-   
-    let   data = new FormData(e.currentTarget);
+
+    let data = new FormData(e.currentTarget);
     let inputName = data.get('name');
     let inputEmail = data.get('email');
     let inputTitle = data.get('title');
@@ -81,8 +85,22 @@ const Contacts = () => {
     }
 
     const dataValid = Boolean(name && email && validate(email) && title && message)
-    if(dataValid){
-      console.log(inputName, inputEmail, inputTitle, inputMessage);
+    if (dataValid) {
+
+      console.log(form.current)
+      emailjs.sendForm('service_7ik3fns', 'template_ajja79i', form.current, 'Dr0QvrzMNZIJ3Z4U1')
+        .then((result) => {
+          console.log(result.text);
+          setName('');
+          setEmail('');
+          setTitle('');
+          setMessage('');
+        }, (error) => {
+          console.log(error.text);
+        });
+
+
+
     }
   }
 
@@ -114,16 +132,16 @@ const Contacts = () => {
         </ul>
       </address>
 
-      <form onSubmit={onSubmitHandler} action="">
+      <form ref={form} onSubmit={onSubmitHandler} action="">
         <div className="input-container">
           <div className="input-field-container">
-            <input onChange={onChangeNameHandler} id="name" className={inputEmpty ? 'name invalid' : 'name'} type="text" name="name" placeholder="Име" value={name} />
+            <input onChange={onChangeNameHandler} id="name" className={inputEmpty ? 'name invalid' : 'name'} type="text" name="user_name" placeholder="Име" value={name} />
             {inputEmpty ? <p>Задължително поле!</p> : ""}
 
           </div>
 
           <div className="input-field-container">
-            <input onChange={onChangeEmailHandler} className={emailEmpty || emailInvalid ? 'email invalid' : 'email'} type="text" name="email" placeholder="E-mail" value={email} />
+            <input onChange={onChangeEmailHandler} className={emailEmpty || emailInvalid ? 'email invalid' : 'email'} type="text" name="user_email" placeholder="E-mail" value={email} />
             {emailEmpty ? <p>Задължително поле!</p> : ""}
             {emailInvalid ? <p>Въведи валиден e-mail!</p> : ""}
           </div>
