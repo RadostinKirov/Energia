@@ -1,4 +1,31 @@
+@media only screen and (max-width: 760px) {
 
+    .contacts ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts ul li {
+        width: 90%;
+        text-align: center !important;
+    }
+
+    .contacts .input-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts .input-field-container{
+        width: 95% !important  ;
+        align-self: center;
+    }
+
+    .contacts .input-field-container input,
+    .contacts .message{
+        width: 95% !important;
+    }
+
+}
 
 
 .contacts .input-container {
@@ -89,9 +116,18 @@ textarea:focus {
 .contacts .title::after {
     content: "";
     border-bottom: 5px solid rgb(230, 163, 21);
-    width: 10%;
+    width: 210px;
     display: block;
     margin: 10px auto;
+}
+
+.contacts address::after {
+    content: "";
+    border-bottom: 5px solid rgb(230, 163, 21);
+    width: 210px;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 25px;
 }
 
 

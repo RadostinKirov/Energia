@@ -13,37 +13,6 @@ const About = () => {
 
   console.log(imagesArr);
 
-  // useEffect(() => {
-  //   let i = 0;
-  //   const timerId = setInterval(() => {
-  //     setImage(imagesArr[i]);
-  //     i++;
-  //     if (i == 5) {
-  //       i = 0;
-  //     }
-  //     console.log('test');
-  //   }, 5000)
-
-  //   if (resetTimer) {
-  //     clearInterval(timerId);
-
-  //     const timerId = setInterval(() => {
-  //       setImage(imagesArr[i]);
-  //       i++;
-  //       if (i == 5) {
-  //         i = 0;
-  //       }
-  //       console.log('test');
-  //     }, 5000);
-
-  //     setResetTimer(false);
-  //   }
-
-  //   return () => { clearInterval(timerId) };
-  // }, []
-  // );
-
-
   const onRightClick = (e) => {
     e.preventDefault();
 
@@ -132,6 +101,7 @@ const About = () => {
           <p> 43.34 Боядисване и стъклопоставяне;</p>
           <p> 43.39 Други довършителни строителни дейности.</p>
         </main>
+        
         <aside className="activity-info animate__fadeInRight">
           <div className="map">
             <iframe

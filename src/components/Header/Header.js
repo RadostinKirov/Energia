@@ -2,13 +2,14 @@ import './Header.css';
 import logo from './assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import React, { useState } from 'react';
+import menu from "./assets/menu-bars.png";
 
 const Header = () => {
 
   const [headerClass, setHeaderClass] = useState('header-on-top');
   const [logoClass, setLogoClass] = useState('header-left logo-on-top');
   const [activeTab, setActiveTab] = useState('home');
-const location = useLocation();
+  const location = useLocation();
 
   window.addEventListener("scroll", () => {
     if (typeof window != 'undefined') {
@@ -29,7 +30,7 @@ const location = useLocation();
 
 
   const setActive = (e) => {
-    
+
     console.log(e);
     switch (e.target.pathname) {
       case "/": setActiveTab('home'); break;
@@ -56,6 +57,17 @@ const location = useLocation();
           <li><Link to="/activities" onClick={setActive} className={activeTab === 'activities' ? 'link-active' : 'link-inactive'} >ДЕЙНОСТИ</Link></li>
           <li><Link to="/contacts" onClick={setActive} className={activeTab === 'contacts' ? 'link-active' : 'link-inactive'} >КОНТАКТИ</Link></li>
         </ul>
+
+ <div class="dropdown">
+ <div className="dropbtn" ><img src={menu} /></div>
+  <div class="dropdown-content">
+    <Link to="/" onClick={setActive} className={activeTab === 'home' ? 'link-active' : 'link-inactive'}>НАЧАЛО</Link>
+    <Link to="/about" onClick={setActive} className={activeTab === 'about' ? 'link-active' : 'link-inactive'}>ЗА НАС</Link>
+    <Link to="/activities" onClick={setActive} className={activeTab === 'activities' ? 'link-active' : 'link-inactive'}>ДЕЙНОСТИ</Link>
+    <Link to="/contacts" onClick={setActive} className={activeTab === 'contacts' ? 'link-active' : 'link-inactive'}>КОНТАКТИ</Link>
+  </div>
+</div> 
+
       </div>
     </header>
 

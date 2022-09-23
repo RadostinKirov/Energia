@@ -1,7 +1,8 @@
 
 .home {
     position: relative;
-    height: 1050px;
+    height: auto;
+    width: auto;
 }
 
 @keyframes fade-in {
@@ -25,6 +26,7 @@
 .home .activity h2,
 .home .activity h3 {
     text-align: center;
+    width: 100%;
 }
 
 .home .activity-image, .home .activity-info {

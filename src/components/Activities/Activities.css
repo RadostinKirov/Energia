@@ -1,3 +1,16 @@
+@media only screen and (max-width: 760px) {
+
+    .activities .container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .activities .container li {
+        width: 100%;
+    }
+
+}
 
 li {
     display: inline-block;
@@ -66,7 +79,7 @@ li img:hover {
 .activities .title::after {
     content: "";
     border-bottom: 5px solid rgb(230, 163, 21);
-    width: 10%;
+    width: 210px;
     display: block;
     margin: 10px auto;
 }

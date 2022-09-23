@@ -2,6 +2,8 @@ import { useState, useRef } from 'react';
 import './Contacts.css';
 import { validate } from 'react-email-validator';
 import emailjs from '@emailjs/browser';
+import callus from './callus.png';
+import emailus from './emailus.png';
 
 
 const Contacts = () => {
@@ -114,7 +116,7 @@ const Contacts = () => {
           <li className="animate__animated animate__bounceIn">
             <a className="icon-container" href="">
               <div className="icon">
-                <img src="./callus.png" alt="" />
+                <img src={callus} alt="call icon" />
               </div>
             </a>
             <span>0887/ 353 423</span> <b>&nbsp;или&nbsp;</b> <span>0431/ 62 800</span>
@@ -124,7 +126,7 @@ const Contacts = () => {
           <li className="animate__animated animate__bounceIn">
             <a className="icon-container" href="">
               <div className="icon">
-                <img src="./emailus.png" alt="" />
+                <img src={emailus} alt="" />
               </div>
               <span>office@energyeood.bg</span>
             </a>
